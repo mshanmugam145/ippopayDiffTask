@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import S from './style'
 
-
-
 function AbsoluteDifferencePage() {
   const [ipValue, setIpValue] = useState("");
   const [data, setData] = useState([]);

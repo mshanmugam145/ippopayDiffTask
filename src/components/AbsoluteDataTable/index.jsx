@@ -27,7 +27,7 @@ function AbsoluteDataTable() {
       </S.Header>
 
       {
-                data?.data.map(item => {
+              data?.data.map(item => {
                     return <div key={item.id}>{item.question}</div>
                 })
             }
