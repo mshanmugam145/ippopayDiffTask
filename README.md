@@ -8,5 +8,6 @@
 ### yarn run dev
 - To check the working code in UI
 
-![image](https://user-images.githubusercontent.com/53182255/226270063-e536d95d-3aa5-4406-8514-3ef730d3c269.png)
+![image](https://user-images.githubusercontent.com/53182255/226271930-6e5352ad-c7d5-4562-adee-7c41f8d01339.png)
+
 
