@@ -1,7 +1,7 @@
 
 import './App.css'
 import AbsoluteDifferencePage from './components/AbsoluteDifference';
-// import AbsoluteDataTable from './components/AbsoluteDataTable';
+import AbsoluteDataTable from './components/AbsoluteDataTable';
 import S from './style'
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -12,7 +12,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
     <S.HomeApp>
       <AbsoluteDifferencePage />
-      {/* <AbsoluteDataTable /> */}
+      <AbsoluteDataTable />
     </S.HomeApp>
     </QueryClientProvider>
   )

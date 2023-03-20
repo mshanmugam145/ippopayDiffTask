@@ -1,5 +1,11 @@
 import { useState } from 'react'
+import {useMutation} from 'react-query';
 import S from './style'
+import axios from 'axios';
+
+const addSuperData = (hero) => {
+  return axios.post('http://localhost:3000/post-data', hero)
+}
 
 function AbsoluteDifferencePage() {
   const [ipValue, setIpValue] = useState("");
@@ -13,9 +19,12 @@ function AbsoluteDifferencePage() {
     return total + parseInt(item);
 }
 
+const { mutate: addData } = useMutation(addSuperData);
+
   const getDiff = () => {
     let convertedData = data.flat();
     let itemData = convertedData[0].split(",");
+    const contres = convertedData[0].split(",");
     if((itemData.length)%2 !== 0){
       setError("Array is not in 2*n")
       return ;
@@ -34,6 +43,11 @@ function AbsoluteDifferencePage() {
   setFirstArr(JSON.stringify(itemData));
   setSecArr(JSON.stringify(max));
   setResult(Math.abs(first - second))
+
+  
+      //store data in db
+      const hero = { firstArray:JSON.stringify(itemData), secondArray:JSON.stringify(max), result: Math.abs(first - second), question: JSON.stringify(contres)};
+      addData(hero);
 }
 
   const addToArr = () => {
@@ -56,7 +70,7 @@ function AbsoluteDifferencePage() {
   }
 
   return (
-    <div>
+    <S.bodyContainer>
       {/* <div className='flex flex-row justify-center text-white bg-purple-500 p-2 rounded-sm'>
         <h1 className='text-3xl font-bold'>Enter Comma separated numbers</h1>
       </div> */}
@@ -99,7 +113,7 @@ function AbsoluteDifferencePage() {
         </div>
         
       </div>
-    </div>
+    </S.bodyContainer>
   )
 }
 
