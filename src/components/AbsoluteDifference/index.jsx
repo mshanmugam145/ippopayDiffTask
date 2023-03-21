@@ -77,6 +77,7 @@ const { mutate: addData } = useMutation(addSuperData);
 
       <S.Header>
         <h1 className='text-3xl font-bold'>Enter Comma separated numbers</h1>
+        <h2 className='text-xl font-bold'>Don't use "[""]" brackets, use simply 1,2,3,4 like this.</h2>
       </S.Header>
 
       <div className='flex flex-col justify-center align-middle text-center mt-4'>
