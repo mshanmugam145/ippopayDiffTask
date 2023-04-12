@@ -4,7 +4,7 @@ import S from './style'
 import axios from 'axios';
 
 const addSuperData = (hero) => {
-  return axios.post('http://localhost:3000/post-data', hero)
+  return axios.post('https://ippo-pay-node.vercel.app/post-data', hero)
 }
 
 function AbsoluteDifferencePage() {

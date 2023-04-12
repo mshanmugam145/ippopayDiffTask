@@ -4,7 +4,7 @@ import { useQuery } from 'react-query'
 import axios from 'axios'
 
 const fetchData = () => {
-  return axios.get('http://localhost:3000/')
+  return axios.get('https://ippo-pay-node.vercel.app/')
 }
 
 function AbsoluteDataTable() {
